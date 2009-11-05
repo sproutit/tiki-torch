@@ -7,8 +7,8 @@ require 'extlib'
 PROJECT_ROOT = File.expand_path(File.dirname(__FILE__))
 
 FRAMEWORKS = {
-  'tiki' => 'http://github.com/sproutit/sproutcore-tiki.git',
-  'core_test' => 'http://github.com/sproutit/core_test.git'
+  'tiki' => 'git://github.com/sproutit/sproutcore-tiki.git',
+  'core_test' => 'git://github.com/sproutit/core_test.git'
 }
 
 desc "Checkout any required frameworks"
@@ -26,7 +26,7 @@ task :init do
     
     # clone if needed...
     if !File.exist?(path / '.git')
-      puts '>> git clone #{clone_url} #{path}' 
+      puts ">> git clone #{clone_url} #{path}" 
       puts `git clone #{clone_url} #{path}`
     end
   end
