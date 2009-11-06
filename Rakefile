@@ -15,7 +15,13 @@ FRAMEWORKS = {
   'core_test' => {
     :visitor => 'git://github.com/sproutit/core_test.git',
     :owner   => 'git@github.com:sproutit/core_test.git'
+  },
+  
+  'sproutcore' => {
+    :visitor => 'git://github.com/sproutit/sproutcore.git',
+    :owner   => 'git@github.com:sproutit/sproutcore.git'
   }
+  
 }
 
 
