@@ -1,0 +1,3 @@
+config :hello_world, 
+  :required => [:tiki, 'tiki/system'],
+  :use_modules => true
