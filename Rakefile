@@ -64,3 +64,16 @@ task :pull do
 end
 
   
+desc "show status of all git repositories"
+task :status do
+  puts "#{PROJECT_ROOT}:"
+  puts `cd #{PROJECT_ROOT}; git status`
+  puts "\n"
+
+  FRAMEWORKS.each do |name, clone_url|
+    path = PROJECT_ROOT / 'frameworks' / name
+    puts "#{path}:"
+    puts `cd #{path}; git status`
+    puts "\n"
+  end
+end
