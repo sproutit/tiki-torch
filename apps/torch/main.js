@@ -4,7 +4,7 @@
 // ==========================================================================
 /*globals Torch */
 
-"import core";
+"import system core";
 "export package main";
 
 var didRun = false;
