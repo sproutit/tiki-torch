@@ -1,13 +1,13 @@
 // ==========================================================================
 // Project:   Torch
-// Copyright: ©2009 Apple Inc.
+// Copyright: ©2009 My Company, Inc.
 // ==========================================================================
 /*globals Torch */
 
-"import system core";
+"import sproutcore";
+"import core";
+"import resources/main_page";
 "export package main";
-
-var didRun = false;
 
 // This is the function that will start your app running.  The default
 // implementation will load any fixtures you have created then instantiate
@@ -16,38 +16,20 @@ var didRun = false;
 // As you develop your application you will probably want to override this.
 // See comments for some pointers on what to do next.
 //
-Torch.main = function() {
+Torch.main = function main() {
 
-  // bug: then is running twice for some reason.
-  if (didRun) return;
-  didRun = true;
-  
-  
-  // load that plugin!
-  require.loader.async('hello_world').then(function() {
-    
-    var plugin = require('hello_world:plugin');
-    plugin.setup();
+  // Step 1: Instantiate Your Views
+  // The default code here will make the mainPane for your application visible
+  // on screen.  If you app gets any level of complexity, you will probably 
+  // create multiple pages and panes.  
+  Torch.getPath('mainPage.mainPane').append() ;
 
-    SC.RunLoop.begin();
-    
-    // exercise the API with some delay so we can watch it happen
-    (function() {
-      console.log('FOO');
-      plugin.ping('Jingleheimer');
-      
-      (function() {
-        console.log('BAR');
-        plugin.teardown();
-      }).invokeLater(500);
-      
-    }).invokeLater(500);
+  // Step 2. Set the content property on your primary controller.
+  // This will make your app come alive!
 
-    SC.RunLoop.end();
-    
-    
-  });
-  
+  // TODO: Set the content property on your primary controller
+  // ex: Torch.contactsController.set('content',Torch.contacts);
+
 } ;
 
-main = function() { Torch.main(); }
+main = function main() { Torch.main(); }
