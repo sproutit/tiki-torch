@@ -5,7 +5,7 @@
 
 # Configure Torch only - rest of frameworks should take care of themselves
 config :torch,
-  :required => :sproutcore,
+  :required => :tiki,
   :test_required => [:core_test],
   :test_debug    => [],
   :use_modules   => true

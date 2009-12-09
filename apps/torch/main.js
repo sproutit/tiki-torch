@@ -32,4 +32,4 @@ Torch.main = function main() {
 
 } ;
 
-main = function main() { Torch.main(); }
+main = function main() { Torch.main(); };
