@@ -4,9 +4,8 @@
 // ==========================================================================
 /*globals Torch */
 
-"import sproutcore";
+"import package sproutcore/runtime";
 "import core";
-"import resources/main_page";
 "export package main";
 
 // This is the function that will start your app running.  The default
@@ -16,13 +15,13 @@
 // As you develop your application you will probably want to override this.
 // See comments for some pointers on what to do next.
 //
-Torch.main = function main() {
+Torch.main = function() {
 
   // Step 1: Instantiate Your Views
   // The default code here will make the mainPane for your application visible
   // on screen.  If you app gets any level of complexity, you will probably 
   // create multiple pages and panes.  
-  Torch.getPath('mainPage.mainPane').append() ;
+  //Torch.getPath('mainPage.mainPane').append() ;
 
   // Step 2. Set the content property on your primary controller.
   // This will make your app come alive!
@@ -32,4 +31,4 @@ Torch.main = function main() {
 
 } ;
 
-main = function main() { Torch.main(); };
+main = function() { Torch.main(); };

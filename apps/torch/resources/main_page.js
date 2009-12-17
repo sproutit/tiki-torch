@@ -4,7 +4,7 @@
 // ==========================================================================
 /*globals Torch */
 
-"import sproutcore";
+"import package sproutcore/runtime";
 "import core";
 
 // This page describes the main user interface for your application.  
